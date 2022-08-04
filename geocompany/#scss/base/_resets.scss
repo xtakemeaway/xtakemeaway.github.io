@@ -1,0 +1,37 @@
+// Главный сброс стилей кнопки
+.button-reset {
+	@extend %flexCenter;
+	@extend %paddingReset;
+	@include textAlign(center);
+	// @include transitionValues();
+	background-color: transparent;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+  color: inherit;
+  cursor: pointer;
+}
+// Главные кнопки страницы
+.button-primary {
+	// @include borderRadius();
+	background-color: #fff;
+	color: $mainColor;
+	&:hover {
+		background-color: $mainColor;
+		color: #fff;
+	}
+}
+// Дополнительные кнопки страницы
+.button-accent {
+	// @include borderRadius();
+	background-color: #fff;
+	color: $mainColor;
+	&:hover {
+		background-color: $mainColor;
+		color: #fff;
+	}
+}
+
+// Сброс стилей списков
+.list-reset {
+	list-style-type: none;
+}

@@ -1,0 +1,12 @@
+<!-- Использование спрайтов 
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol viewBox="0 0 21 27" id="">
+  </symbol>
+</svg>
+-->
+
+<!-- Вставка svg-спрайтов 
+<svg class="icon">
+	<use xlink:href="images/sprites.svg#review-icon"></use>
+</svg>
+-->

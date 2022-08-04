@@ -1,0 +1,36 @@
+@if ($responsiveType==1) {
+	[class*="__container"] {
+		@if ($maxWidthContainer > 0) {
+			max-width: toRem($maxWidthContainer);
+			box-sizing: content-box;
+			@extend %marginAuto;
+		}
+		@if ($containerPadding > 0) {
+			padding: 0 toRem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	[class*="__container"] {
+		@extend %marginAuto;
+		@if ($maxWidthContainer > 0) {
+			max-width: toRem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding > 0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: toRem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: toRem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding > 0 and $maxWidthContainer > 0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}

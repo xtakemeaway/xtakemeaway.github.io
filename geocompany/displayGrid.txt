@@ -1,0 +1,25 @@
+//Grid-контейнер
+<div class="grid">
+	//Grid-элементы
+	<div class="grid__item">1</div>
+	<div class="grid__item">2</div>
+	<div class="grid__item">3</div>
+	<div class="grid__item">4</div>
+</div>
+
+//grid-template-columns
+//grid-template-rows
+
+//grid-template-columns: repeat(3, 1fr)/repeat(3, 33.333%);
+// gap: 10px;
+
+//grid-template-columns: repeat(auto-fit, minmax(минимальное значение, максимальное значение));
+
+//grid-auto-flow
+//grid auto-rows
+//grid-auto-columns
+
+//grid-template-areas: "header header header"
+		       "navigation section aside"
+		       "footer footer footer";
+//grid template-area

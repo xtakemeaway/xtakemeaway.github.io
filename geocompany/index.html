@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Не забываем поменять язык основного контента -->
+<html lang="ru">
+<head>
+	<!-- Основные мета-теги -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- Название сайта -->
+	<title>Document</title>
+	<!-- Подключение иконки через конвертирование .png в .ico на сайте convertico.com -->
+	<link rel="icon" href="" type="image/x-icon"> 
+	<!-- Основная таблица стилей -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Оболочка сайта для разделения частей -->
+	<div class="wrapper">
+		<!-- Шапка сайта -->
+		<header class="header">
+			<div class="header__container">
+				<div class="header__inner">
+					<div class="header__logotype">
+						<a href="#">Logotype</a>
+					</div>
+					<nav class="navigation">
+						<ul class="list-reset navigation__list">
+							<li class="navigation__item">
+								<a href="" class="navigation__link">Point 1</a>
+							</li>
+							<li class="navigation__item">
+								<a href="" class="navigation__link">Point 2</a>
+							</li>
+							<li class="navigation__item">
+								<a href="" class="navigation__link">Point 3</a>
+							</li>
+							<li class="navigation__item">
+								<a href="" class="navigation__link">Point 4</a>
+							</li>
+							<li class="navigation__item">
+								<a href="" class="navigation__link">Point 5</a>
+							</li>
+						</ul>
+					</nav>
+					<div data-da=".navigation__list, 480" class="header__actions">
+						<button class="button-reset header__button" type="button">Submit</button>
+					</div>
+					<button class="button-reset burger-menu">
+						<span></span><span></span><span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<!-- Основной контент -->
+		<main class="main">
+			<section class="first-screen">
+				<div class="first-screen__container">
+					<div class="first-screen__content">
+						<h2 class="first-screen__title">Lorem, ipsum dolor sit amet consectetur adipisicing.</h2>
+						<p class="first-screen__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit expedita pariatur ex molestias magnam quae distinctio cupiditate accusantium.</p>
+						<button class="button-reset first-screen__button">Learn more</button>
+					</div>
+				</div>
+				<div class="first-screen__img first-screen__image">
+					<img src="images/image.jpg" alt="Lorem, ipsum dolor sit amet consectetur adipisicing.">
+				</div>
+			</section>
+		</main>
+		<!-- Подвал сайта -->
+		<footer class="footer"></footer>
+		<!-- Подключение библиотеки jQuery <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  -->
+		<!-- Подключение скриптов -->
+		<script src="js/script.js"></script>
+		<script src="js/burger.js"></script>
+		<script src="js/dynamic_adapt.js"></script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+// Меню
+@media (max-width: $mobile) {
+	.burger-menu {
+		display: block;
+		-webkit-transform: translateY(-7px);
+		transform: translateY(-7px);
+		width: 40px;
+		height: 27px;
+		position: relative;
+		z-index: 20;
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		@include transitionValues(rotate);
+		cursor: pointer;
+		span {
+			display: block;
+			position: absolute;
+			height: 5px;
+			width: 100%;
+			background-color: #fff;
+			@include borderRadius(9px);
+			opacity: 1;
+			left: 0;
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+			@include transitionValues(rotate);
+			&:nth-child(1) {
+				top: 0px;
+			}
+			&:nth-child(2) {
+				top: 10px;
+			}
+			&:nth-child(3) {
+				top: 20px;
+			}
+		}
+		&._active {
+			span {
+				&:nth-child(1) {
+					top: 13px;
+					-webkit-transform: rotate(135deg);
+					transform: rotate(135deg);
+				}
+				&:nth-child(2) {
+					opacity: 0;
+					left: -60px;
+				}
+				&:nth-child(3) {
+					top: 13px;
+					-webkit-transform: rotate(-135deg);
+					transform: rotate(-135deg);
+				}
+			}
+		}
+	}
+}

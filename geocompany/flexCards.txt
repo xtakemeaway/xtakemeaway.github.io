@@ -1,0 +1,146 @@
+// HTML-разметка
+<div class="block">
+	<div class="block__container">
+		<div class="block__cards">
+			<div class="block__card">
+				<div class="card-block">
+					<a href="#" class="card-block__image _ibg">
+						<img src="images/products/product-1.jpg" alt="">
+					</a>
+					<div class="card-block__content">
+						<h3 class="card-block__title">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+						<p class="card-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloribus a aliquid nemo officia amet.</p>
+						<a href="#" class="button-reset card-block__button">Learn more</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block__card">
+				<div class="card-block">
+					<a href="#" class="card-block__image _ibg">
+						<img src="images/products/product-2.jpg" alt="">
+					</a>
+					<div class="card-block__content">
+						<h3 class="card-block__title">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+						<p class="card-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ipsum tenetur officia cum maiores ratione autem delectus dignissimos veniam nobis at aperiam, hic nesciunt quibusdam!</p>
+						<a href="#" class="button-reset card-block__button">Learn more</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block__card">
+				<div class="card-block">
+					<a href="#" class="card-block__image _ibg">
+						<img src="images/products/product-3.jpg" alt="">
+					</a>
+					<div class="card-block__content">
+						<h3 class="card-block__title">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+						<p class="card-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloribus a aliquid nemo officia amet.</p>
+						<a href="#" class="button-reset card-block__button">Learn more</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block__card">
+				<div class="card-block">
+					<a href="#" class="card-block__image _ibg">
+						<img src="images/products/product-4.jpg" alt="">
+					</a>
+					<div class="card-block__content">
+						<h3 class="card-block__title">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+						<p class="card-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloribus a aliquid nemo officia amet.</p>
+						<a href="#" class="button-reset card-block__button">Learn more</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block__card">
+				<div class="card-block">
+					<a href="#" class="card-block__image _ibg">
+						<img src="images/products/product-5.jpg" alt="">
+					</a>
+					<div class="card-block__content">
+						<h3 class="card-block__title">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+						<p class="card-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloribus a aliquid nemo officia amet.</p>
+						<a href="#" class="button-reset card-block__button">Learn more</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block__card">
+				<div class="card-block">
+					<a href="#" class="card-block__image _ibg">
+						<img src="images/products/product-6.jpg" alt="">
+					</a>
+					<div class="card-block__content">
+						<h3 class="card-block__title">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+						<p class="card-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloribus a aliquid nemo officia amet.</p>
+						<a href="#" class="button-reset card-block__button">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+// Код SCSS
+.block {
+	padding: 50px 0;
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		row-gap: 30px;
+	}
+	&__card {
+		flex: 1 1 33.333%;
+		padding: 0 15px;
+	}
+}
+.card-block {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@include borderRadius(10px);
+	border: 1px solid #000;
+	min-width: 275px;
+	// Указываем высоту, чтобы контент был на одном уровне
+	height: 100%;
+	&__image {
+		padding-bottom: 70%;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		// Позволяем контенту увеличиваться
+		flex: 1 1 auto;
+		padding: 15px;
+		> *:not(:last-child) {
+			margin-bottom: toEm(16);
+		}
+	}
+	&__title {
+		font-size: toRem(20);
+		font-weight: 700;
+	}
+	&__text {
+		// Позволяем тексту увеличиваться и оставаться на одном уровне
+		flex: 1 1 auto;
+	}
+	&__button {
+		@include borderRadius(10px);
+		background-color: green;
+		min-height: 40px;
+		color: #fff;
+	}
+}
+
+/* Подсчет flex-basis = ширина контейнера по макету (без паддингов)
+flex-basis = ширина контейнера по макету (без паддингов) - отступы между карточками, 
+потом ширину карточки по макету / ширину контейнера без отступов между карточками * 100%
+flex-basis = 1200px - (30px * 2), 320px / 1140px * 100%
+*/
+
+/* Подсчет процентного padding-bottom
+padding-bottom = высота картинки / ширина картинки * 100%
+*/

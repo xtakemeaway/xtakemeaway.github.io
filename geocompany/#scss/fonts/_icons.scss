@@ -1,0 +1,22 @@
+// Конвертировать из архива формат ttf в woff и woff2
+@font-face {
+	font-family: 'icons';
+	src: url('') format('woff2');
+	src: url('') format('woff');
+	font-weight: 400;
+	font-display: swap;
+}
+// Основные стили иконок
+[class*="_icon-"] {
+	&:before {
+		display: block;
+		font-family: 'icons';
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
